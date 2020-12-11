@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* layout */
+#mNav {display: none; position: absolute; top: 10px; right: 14px;}
+
+#header {width: 100%; /*background-color: #ccc;*/ border-bottom: 1px solid #c6c6c6;}
+#banner {position: relative;}
+
+/* container */
+.container {
+	position: relative; /* 기준점을 잡기 쉽게 하기 위하여 */
+	width: 1280px; height: inherit;
+	margin: 0 auto;
+	/*background-color: rgba(0,0,0,0.4);*/
+}
+
+/* row */
+.row {padding: 0 28px;}
+
+/* mobile menu */
+.ham {display: block; width: 25px; height: 10px; /*background-color: #ccc;*/ padding: 15px 10px 10px 10px;}
+.ham span {display: block; width: 25px; height: 4px; background-color: #39106a; position: relative;}
+.ham span:before {
+	content: ''; width: 25px; height: 4px; background-color: #39106a;
+	position: absolute; left: 0; bottom: -7px;
+}
+.ham span:after {
+	content: ''; width: 25px; height: 4px; background-color: #39106a;
+	position: absolute; left: 0; top: -7px;
+}
+
+
+/* header */
+.header {}
+.header h1 {float: left;}
+	.header h1 em {padding: 15px 8px 5px 0; display: inline-block;}
+	.header h1 em img {width: 155px;}
+	.header h1 strong {display: block; position: absolute; left: 194px; top: 24px;}
+	.header h1 strong img {width: 126px;}
+.header .nav {float: right;}
+	.header .nav ul {border-left: 1px solid #c6c6c6;}
+	.header .nav li {
+		float: left; /* 메뉴 항목 사이에 보더값이 딱 맞춰서 들어가야 하기 때문에 display: inline; 은 적합하지 않습니다 */
+		width: 103px; text-align: center; border-right: 1px solid #c6c6c6;
+	}
+	.header .nav li a {display: block; padding: 19px 10px; font-size: 17px; font-weight: 700; color: #444;}
+
+
+/* banner */
+.banner_menu {
+	position: absolute; left: 0; top: 20px; width: 100%; height: 100px;
+	overflow: hidden;
+	z-index: 10;
+}
+.banner_menu a {color: #fff; font-size: 16px; transition: all .3s;}
+.banner_menu a:hover {color: #c1c1c1;}
+.banner_menu li.line {position: relative;}
+.banner_menu li.line:after {content: ''; width: 1px; height: 14px; background-color: #fff; position: absolute; right: -18px; top: 2px;}
+.banner_menu .ban_l {float: left;}
+	.banner_menu .ban_l ul {padding-top: 7px;}
+	.banner_menu .ban_l li {display: inline; margin-right: 30px;}
+	.banner_menu .ban_l li.total {margin-right: 20px;}
+	.banner_menu .ban_l li.total a {font-size: 14px; padding: 3px 10px; display: inline-block; border: 1px solid #fff; transition: all .3s;}
+	.banner_menu .ban_l li.total a:hover {background-color: #fff; border-color: #000; color: #000;}
+.banner_menu .ban_r {
+	float: right;
+	overflow: hidden;}
+	.banner_menu .ban_r ul {float: left;}
+	.banner_menu .ban_r ul:first-child {padding-top: 7px;}
+	.banner_menu .ban_r li {display: inline; text-align: center; margin-right: 20px;}
+	.banner_menu .ban_r li.line {margin-right: 30px;}
+	.banner_menu .ban_r li.white {margin-right: 10px;}
+	.banner_menu .ban_r li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff;}
+	.banner_menu .ban_r li.purple {margin-right: 0;}
+	.banner_menu .ban_r li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #6e40c4;}
+
+
+
+/* slide */
+.slider {width: 100%; height: 600px;}
+.slider .ss1 {background: url(../img/main_slider01_2000.jpg) no-repeat center; background-size: cover;}
+.slider .ss2 {background: url(../img/main_slider02_2000.jpg) no-repeat center; background-size: cover;}
+.slider .ss3 {background: url(../img/main_slider03_2000.jpg) no-repeat center; background-size: cover;}
+
+
+/* mediaquery */
+/* 화면너비 0 ~ 1220px */
+@media (max-width: 1290px){ /* 여유있게 */
+	.container {width: 100%;}
+	
+	.header .nav ul li {width: 93px;}
+	.header .nav ul li a {font-size: 15px; padding: 17px 10px;}
+	.header h1 em {padding: 11px 8px 5px 0;}
+	.header h1 strong {top: 19px;}
+}
+@media (max-width: 1024px){
+	#mNav {display: block;}
+	.row {padding: 0 24px;}
+
+	.header h1 {float: none; text-align: center;}
+	.header h1 strong {left: 24px;}
+	.header .nav {display: none;}
+}
+@media (max-width: 960px){
+	
+}
+@media (max-width: 768px){
+	.row {padding: 0 16px;}
+	#mNav {right: 6px;}
+
+	.header h1 {text-align: left;}
+	.header h1 strong {display: none;}
+}
+@media (max-width: 480px){
+	
+}
+@media (max-width: 320px){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
